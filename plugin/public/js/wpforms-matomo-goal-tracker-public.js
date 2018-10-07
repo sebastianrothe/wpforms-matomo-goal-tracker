@@ -1,3 +1,5 @@
+var _paq = _paq || [];
+
 (function($) {
   "use strict";
 
@@ -28,18 +30,16 @@
    * Although scripts in the WordPress core, Plugins and Themes may be
    * practising this, we should strive to set a better example in our own work.
    */
-  $(function() {
-    if (!_paq) {
-      console.warn("Matomo Tracker is not initialized.");
-    }
 
-    var formCompleted = $("wpforms-confirmation-container");
-    if (!formCompleted) {
+  $(function() {
+    var formCompleted = $(".wpforms-confirmation-container");
+    if (!formCompleted || !formCompleted.length) {
       return;
     }
 
     var formId = formCompleted.attr("id");
     if (!formId) {
+      console.warn("Could not get form-ID");
       return;
     }
 
