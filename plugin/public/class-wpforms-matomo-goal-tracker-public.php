@@ -100,7 +100,7 @@ class Wpforms_Matomo_Goal_Tracker_Public
          * class.
          */
 
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wpforms-matomo-goal-tracker-public.js', array('jquery'), $this->version, false);
+        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/wpforms-matomo-goal-tracker-public.js', array('jquery'), $this->version, true);
 
     }
 
